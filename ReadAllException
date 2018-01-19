@@ -1,0 +1,52 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.io.*;
+ 
+public class ReadAllException {
+ 
+        public static void main(String args[]){
+
+	try{  
+	
+		
+	File fw=new File(args[0]);
+
+	if(!fw.exists()){
+		System.out.println("File not exist on given path");
+		System.exit(-1);
+    	}
+
+	BufferedReader br=new BufferedReader(new FileReader(fw));
+
+	String sCurrentLine;
+	int countexcep=0;
+	System.out.println("Reading Exception : "+args[1]);
+	while ((sCurrentLine = br.readLine()) != null) {
+		if(sCurrentLine.contains(args[1]))
+		{
+			countexcep++;
+		}
+				
+	}
+
+	if(countexcep == 0)
+	{
+		System.out.println("No matches found");
+	
+	}
+	else
+	{
+		System.out.println("Number of matches found : "+countexcep);
+	}
+br.close();
+
+}
+catch(Exception e)
+{
+System.out.println("Error Caught : "+e.getMessage());
+}
+
+        }
+}
+ 
