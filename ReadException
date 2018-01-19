@@ -1,0 +1,61 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.io.*;
+ 
+public class ReadException {
+ 
+        public static void main(String args[]){
+
+	try{  
+	
+		 Date date = new Date();
+               
+                 DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+               
+                String strDate = dateFormat.format(date);
+
+		String tdate=strDate.trim(); 
+	
+		String filename="-_"+tdate+".log";
+
+
+	String FilePath = args[0] + filename;
+
+	File fw=new File(FilePath);
+
+	if(!fw.exists()){
+		System.out.println("File not exist on given path");
+    	}
+
+	BufferedReader br=new BufferedReader(new FileReader(FilePath));
+
+	String sCurrentLine;
+	int countexcep=0;
+	while ((sCurrentLine = br.readLine()) != null) {
+		if(sCurrentLine.contains(args[1]))
+		{
+			countexcep++;
+		}
+				
+	}
+
+	if(countexcep == 0)
+	{
+		System.out.println("No matches found");
+	
+	}
+	else
+	{
+		System.out.println("Number of matches found : "+countexcep);
+	}
+br.close();
+
+}
+catch(Exception e)
+{
+System.out.println("Error Caught : "+e.getMessage());
+}
+
+        }
+}
