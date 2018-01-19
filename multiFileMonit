@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.*;
+import java.sql.*;
+
+public class MultiFilesMonit
+{
+
+public static void main(String args[])throws Exception
+{
+
+try
+{
+Date now = new Date();
+File folder = new File(args[0]); 	//args[0] Source Path
+final String FileNamingPattern=args[1];	//args[1] file naming pattern
+File[] files = folder.listFiles(new FilenameFilter()
+	{ 
+	@Override 
+	public boolean accept(File dir, String name)
+		{ 
+		return name.contains(FileNamingPattern); 
+		} 
+	}
+	);
+System.out.println("Lenght of the array " +files.length);
+for (File file : files) {
+System.out.println("File " +file.getName()+ " is being processed ");
+
+	Timestamp stamp = new Timestamp(file.lastModified()); 
+	Date modifiedtime = new Date(stamp.getTime());
+
+	int min = Integer.parseInt(args[3]); //args[3] Number of minutes old files
+	if(now.getTime() - file.lastModified() > (min*60*1000))
+		{
+		System.out.println(args[3]+ " old files found in " + args[0]);
+		file.renameTo(new File(args[2]+file.getName())); //args[2] Destination path
+		System.out.println("File " +file.getName()+ " moved successfully to "+args[2]);
+		}
+		else
+		{
+		System.out.println(args[3]+ " old files does not exists in " + args[0]);
+		}
+			}	
+}
+catch(Exception e)
+{
+System.out.println("Exception in Program : " +e.getMessage());
+}
+}
+}
