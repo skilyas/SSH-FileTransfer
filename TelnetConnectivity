@@ -1,0 +1,51 @@
+import java.io.*;
+import java.net.*;
+import java.util.*;
+import java.util.TimerTask;
+//import org.apache.commons.net.telnet.TelnetClient;
+class Connectivity extends TimerTask
+{
+    public static void main(String args[])
+    {
+        try
+        {
+            String ip=args[0].trim();
+            TimerTask con  = new Connectivity();
+            int port=Integer.parseInt(args[1]);
+            Timer timer = new Timer();
+            timer.scheduleAtFixedRate(con,1,1000);
+            Socket s1=new Socket(ip,port);
+            InputStream is=s1.getInputStream();
+            DataInputStream dis=new DataInputStream(is);
+            if(dis!=null)
+            {
+                System.out.println("Connected with ip "+ip+" and port "+port);
+		System.exit(0);
+            }
+            else
+            {
+                System.out.println("Connection invalid");
+		System.exit(-1);
+            }
+
+            dis.close();
+            s1.close();
+
+        }
+        catch(Exception e)
+        {
+            System.out.println("Not Connected,Please check urgently");
+		System.exit(-1);
+
+        }
+
+
+    }
+@Override
+    public void run() {
+        // TODO Auto-generated method stub
+
+    }
+
+}
+
