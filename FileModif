@@ -1,0 +1,63 @@
+import java.io.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.text.*;
+import java.sql.*;
+
+public class FileMonit
+{
+
+public static void main(String args[])throws Exception
+{
+
+
+try
+{
+
+Date now = new Date();
+
+
+File f1 = new File(args[0]);
+
+
+	if(!f1.exists())
+	{
+		System.out.println("File not available at path specified");
+		System.exit(-1);
+		
+	}
+
+Timestamp stamp = new Timestamp(f1.lastModified()); 
+Date modifiedtime = new Date(stamp.getTime());
+
+
+
+	
+int min = Integer.parseInt(args[1]);
+
+if(now.getTime() - f1.lastModified() > (min*60*1000))
+{
+
+	System.out.println("File is not modified in last : "+min +" Minutes");
+	System.out.println("Last Modified time of the file " + args[0] +" is :"+modifiedtime);
+	System.exit(-1);
+	
+
+	
+}
+else
+{
+	System.out.println("File is updated within : "+min +" Minutes");
+	System.out.println("Last Modified time of the file " + args[0] +" is :"+modifiedtime);		
+}
+
+
+
+}
+catch(Exception e)
+{
+System.out.println("Exception in Program : " +e.getMessage());
+}
+
+}
+}
