@@ -1,0 +1,16 @@
+Informatica
+-------------------
+Connection Profile
+===================
+Hub Host Name	Hub Port	Power Center Domain	Repository Name	Integration Service	Connection Type (HTTP/HTTPS)	User Name	Password
+
+Job Details
+===================
+Sr. No.	Job Name	Job Description (Mandatory)	Repository Folder 	Workflow	Instance Name	Execution Mode (Whole Workflow/From Task/Specific Task)	Task Name (NA if Whole Workflow)	Parameters	Suspended Workflow (Default rerun option)	"Schedule
+(Date/Specific day/Time)"
+
+Hadoop 
+-------------------
+
+Connection Profile
+==================
