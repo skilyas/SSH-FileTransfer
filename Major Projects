@@ -1,0 +1,563 @@
+S.No
+	
+
+Name of the Project
+	
+
+Stage
+	
+
+Dependencies
+	
+
+Project Description
+	
+
+Current Status
+
+1
+	
+
+Automation forensic
+	
+
+Feasibility/Planning
+	
+
+Procurement of the utility at TMG end. Confirmation from vendor side pending regarding certain functionalities.
+	
+
+Workload Archival utility implementation to be done for managing history/audit data and also to perform several trend analysis based on the forensics.Job output/log comparisons can be performed to analyse the execution pattern.
+
+BENEFITS :
+1. History data will be maintained and when required during issue troubleshoot/audit purposes, it can be shared with the respective stakeholders.
+2. Trend analysis can be done based on the huge data, like EOD analysis of Icore, Murex,etc.
+3. A complete visual data of the history data will help us compare the execution data in a better fashion.
+	
+
+Feasibility and analysis is currently under progress. Vendor has shared the functionalities with HYD team and is supposed to meet the leadership at Mumbai for a product overview. The cost and ROI needs to be validated. Also it is dependant on point number 182 -- "Improved resilience for I-Automation" as the vendor has suggested to separate the EM and server before the implementation of workload archival utility.
+
+2
+	
+
+30 K Job Targets and Business centric automations -5k
+	
+
+Development/Configuration
+	
+
+Dependancies on requirements
+	
+
+Business centric requirements will be given more priority to derive a ROI from each of them. Internal IT automation will also be addressed parallely. We will be meeting the business and arrange workshops accordingly to share the detailed scope of automation.
+	
+
+25000 + Jobs have been automated and there are several automation requirements in piepeline. Team is working on the same. We are closely working with the business teams.
+
+3
+	
+
+I-Automation services for Informatica and HADOOP
+	
+
+Development/Configuration
+	
+
+1.Dependancy on DWH,MIS,Informatica and HADOOP teams. Seamless coordination and support is required to make this process implementation a success.
+	
+
+i-Automation for Informatica and HADOOP
+
+New modules like Informatica and HADOOP will be explored in I-Automation wherein completely automated workflow triggers will be handled.Effective alert system with “on the fly” monitoring through mobile app, email and SMS will be enabled.Additionally, various automated validation checks can be implemented which would eliminate operational failures.
+BENEFITS :
+1. Central dashboard to manage the workflow executions.
+2. Failures can be identified and alerted easily and rerun of the same from the exact failure point can be done rather than running the complete worflow again.
+3. Effective alert system in place with SMS and Email integration.
+4. Mobile app to manage the job executions on the fly.
+	
+
+Work on i-Automation for Informatica has been initiated and UAT configurations are completed. We are currently under testing phase for seeinfobiz workflow wherein corebanking file ETL process is automated with several customized validation checks for debit and credit checks. An effective alert system is also being designed so that any failure can be treated with a proactive approach rather than a reactive one.
+
+4
+	
+
+Handshake between I-Automation and ROBOTICS through API
+	
+
+Feasibility/Planning
+	
+
+Dependancy on Murex team for a go ahead and testing. POC to be completed by the Robotics Team.
+	
+
+Automation of CAS Fixing flow in Treasury wherein deals are fixed geography wise before starting the EOD process is planned to be implemented by a handshake between I-Automation and ROBOTICS. The front end automation will be handled by ROBOTICS and backend side by I-Automation with an integration through API.
+BENEFITS :
+1. Integration of i-automation and robotics will provide a complete automation package to the business wherein we will be able to automate almost everything(both front end and backend).
+2. We will be providing only a single dashboard to the user rather than separate automation windows.
+3. Depedent automated structures can be prepared after this integration and hence operational failures and manual interventions can be drastically eliminated.
+	
+
+API testing has been done at i-Automation end and the link has been shared to ROBOTICS Team. Robotics team is currently analysing the feasibility of API integration.
+
+5
+	
+
+i-Automation Support on Cloud
+	
+
+Testing/Implementation
+	
+
+Approvals required from IGRS application side to provide an implementation go ahead.
+	
+
+Job Automation for IGRS application which is currently migrating its PROD and FB app servers to CLOUD environment.I-Automation has a cross platform compatibility with cloud and hence job movements will be seamless without any downtime.
+BENEFITS :
+1. Automation services will be extended on cloud platform and hence the compatibility will be assured.
+2. Dependancies can be set between automated jobs of application on cloud and non-cloud setups.
+3. Seamless movement of existing setup to cloud will deliver a robust solution.
+	
+
+Testing for IGRS application has been completed on UAT.  We are awaiting a confirmation from APP team for Production movement.
+
+6
+	
+
+Improved resilience for I-Automation
+	
+
+Feasibility/Planning
+	
+
+Infrastructure requirement.
+	
+
+EM (Enterprise Manager) and SERVER segregation in I-Automation for maximum availability.Daily jobs will not be impacted if EM is impacted and 24 hr window will be available to troubleshoot the issue.
+	
+
+We are awaiting a confirmation from Infra side for server procurement. Once we receive a confirmation, we will go ahead with the implementation part.
+
+7
+	
+
+Smart Alert and Job Management
+	
+
+Feasibility/Planning
+	
+
+Huge Data collection to analyze the errors and also to prepare a dictonary for the same is required.
+	
+
+Taking into consideration that every 5 hrs,20K alerts are triggered in I-Automation, Smart alert management has been planned wherein alerts triggered for cyclic jobs which runs for a range of time in anticipation for a file are handled automatically incase the file is not present. Also, shout alerts are triggered incase the file does not reach the destination within the stipulated range of time.
+	
+
+Alert management project has been categorized into 13 phases. Each phase comprises of 10 applications. We have completed 3 phases and addressed 30 applications as on 28th May 2019.
+
+8
+	
+
+Load Balancer on Web Server
+	
+
+Completed
+	
+
+NA
+	
+
+Taking into consideration the load on the web server due to huge number of users accessing/monitoring the jobs using self service portal and mobile app, we have configured the load balancer at web layer. Now request are routing through both the web server and load has been reduced drastically.
+	
+
+Done
+
+9
+	
+
+Report Jobs Automation
+	
+
+Ongoing
+	
+
+NA
+	
+
+I-Automation has automated the JDF (Jobs Definition Report) and JRE (Jobs Execution Reports) for automated application. JDF contains the list of jobs with job schedules configured in I-Automation. JRE contains the job execution details like job start time, end time, status etc.
+	
+
+It has been completed for 127 applications.WIP for 7 apps which Newly inducted  applications in i-Automation.
+
+10
+	
+
+Backup Jobs Automation
+	
+
+Ongoing
+	
+
+NA
+	
+
+Backup jobs have been configured to take backup of I-Automation agents critical/key files to restore the agent in case of agent failure/crash or data corruption. It helps to minimize the time and impact in case of issues.
+	
+
+594 Backup jobs have been created. WIP for newly inducted agents.
+
+11
+	
+
+Workload Policies Creation for Single click Switchover and Switchback
+	
+
+Ongoing
+	
+
+NA
+	
+
+Workload policies allows us host mapping wherein jobs can be pointing to DR/fallback/secondary server in a single click. We have configured workload policies for each application and advance to perform a quick switch over and switch back for planned and unplanned DR and fallback drills.
+	
+
+As and when we get DR/FB Drill requests, we prepare the workload  policies and other related actionables. We also maintain checklists for the Drills which are taken as a confirmation from creater,reviewer of the actionables and also from the stakeholders of the jobs.
+
+12
+	
+
+Workspaces, Folders and Jobs Naming Pattern Standardization
+	
+
+Ongoing
+	
+
+NA
+	
+
+Standard naming conventions have been defined for workspaces, folders and jobs to form uniformity and changes have been done in existing configured applications.
+	
+
+The applications in i-Automation are divided phase wise and each week we plan to handle one phase. Considering the huge amount od automations we handle,this standardization will help us in streamlining several structures and inturn will help in enhanced monitoring,troubleshooting of issues and in maintaining organized  data.
+
+13
+	
+
+DiskSpace alert config
+	
+
+Ongoing
+	
+
+NA
+	
+
+Disk Space alerts have been configured for all I-Automation agents to take appropriate operation proactively before agent disfunctioning due to 100% disk space utilization. Alerts have been configured on 70%, 80% and 90% threshold.
+	
+
+These jobs are configured as an ongoing process and are completed as and when we get an agent installation request.
+
+14
+	
+
+Zombie Process detection alert job automation
+	
+
+Completed
+	
+
+NA
+	
+
+Job has been automated to monitor the zombie process on I-Automation application server and take appropriate action on it to avoid application failure.
+	
+
+Done
+
+15
+	
+
+Winscp to MFT jobs migration
+	
+
+Feasibility/Planning
+	
+
+Respective stakeholder should complete the prerequisites for the implementations.
+	
+
+Winscp is a third party tool and hence doesn't have support from the vendor. With jobs configured earlier with winscp, we have identified various issues over the period of time which doesn't have a fix. BMC provided the MFT with V9 which resolves the issue associated wih Winscp and provides additional security options. We have initiated a project to migrate all Winscp jobs to MFT
+	
+
+Out of 4000 licenses for MFT, we have utlized 3700 Licenses.MFT Implementation is being done to eliminate all the dependancy on winscp both for existing setup and new requirements.
+
+16
+	
+
+File Sync between Prod, fallback and DR job automation
+	
+
+Completed
+	
+
+NA
+	
+
+File Sync jobs have been configured to copy and update customization files placed on the production/ These jobs sync the data between production, fallback and DR server weekly.
+	
+
+Done
+
+17
+	
+
+Shout Destination Alert
+	
+
+Ongoing
+	
+
+NA
+	
+
+Shout destination alert feature of I-Automation trigger an alert in case of job not started/finished within expected time. Shout destination alerts have been configured in many applications having time bound critical jobs.
+	
+
+These alerts have been implemented based on the process criticality.
+
+18
+	
+
+Quantitative Resources
+	
+
+Ongoing
+	
+
+NA
+	
+
+Quantitative resource feature restrict the parallel execution of the jobs. I-Automation team has asked the application/support team to identify the critical jobs where duplicate job execution has the impact on a business and applied quantitative resources to prevent the duplicate execution.
+	
+
+These alerts have been implemented wherein there are possiblities of duplicacy or data loss.
+
+19
+	
+
+Financial / Non Financial jobs bifurcation
+	
+
+In progress
+	
+
+NA
+	
+
+Bifurcation of all jobs into Financial and Non-Financial categories to manage jobs during exigency situations. During mass issue, the finacially impacted jobs will be catered earlier.
+	
+
+The changes have been completed for 82 applications.
+
+20
+	
+
+BIM (Batch Impact Manager)
+	
+
+Completed
+	
+
+NA
+	
+
+BIM proactively identify the delay in business critical workflow and alert the user, so the appropriate action can be taken to avoid the business impact. BIM has been implement in Treasury application EOD workflows.
+	
+
+Done
+
+21
+	
+
+Complete Applications Information to be listed in Confluence
+	
+
+Ongoing
+	
+
+NA
+	
+
+Applications automated in I-Automation are to be listed in Confluence with tier, functionality and other details.
+	
+
+Completed till June 2019 Data.
+
+22
+	
+
+Non Trojan Port Configuration for file transfer
+	
+
+Ongoing
+	
+
+NA
+	
+
+As per I-secure ssh port 22 is a trojan port and require an exception to open for file transfer between DMZ servers. We have introduce the non trojan ports 6010, 7010 and 8010 for file transfer between DMZ zone.
+	
+
+All exisiting setups with port 22 have been updated with non trojan ports. Its an ongoing project wherein implementations are done based on the upcoming requirements.
+
+23
+	
+
+Parameter Jobs automation
+	
+
+Ongoing
+	
+
+NA
+	
+
+Parameter jobs have been configured to check the difference in parameters of Agents,CTMSERVER and EM server. There jobs runs every week to verify for any deafult parameter changes. Also during issues, we follow a protocol to run these parameter jobs to verify if the issue has happened to parameter jobs.
+	
+
+Parameter job configurations for EM and server is completed.  Agent level parameters are being configured as on ongoing process.
+
+24
+	
+
+Automated Error Log monitoring
+	
+
+Ongoing
+	
+
+NA
+	
+
+Team is Currently working on the automated check for error logs wherein we have scripted to read errors in the logs. This helps us to find error in seconds of time. The error logs are mailed to us as an attachment.
+	
+
+Testing Phase is in progress.
+
+25
+	
+
+Reconciliation of Agent data with agents added in CCM
+	
+
+Ongoing
+	
+
+NA
+	
+
+I-Automation team recon the agent list with agents added in CCM with FPR, application and other details
+	
+
+Completed till June 2019 Data.
+
+26
+	
+
+Tier and Application functionality details inducted for Automation (130+ Applications)
+	
+
+Completed
+	
+
+NA
+	
+
+All the application inducted in automation are documented with their functionality details wherein team can refer the data and understand the criticality of any job during issues.
+	
+
+Done
+
+27
+	
+
+LAM Recon
+	
+
+Completed
+	
+
+NA
+	
+
+Auto recon jobs are created for automation.
+	
+
+Done
+
+28
+	
+
+Server Patching
+	
+
+Ongoing
+	
+
+NA
+	
+
+Regular patching activity.
+	
+
+Done
+
+29
+	
+
+DR Drills
+	
+
+Ongoing
+	
+
+NA
+	
+
+Handling the actionables for DR DRILLS for several applications is a daily activity for the team. Detailed Analysis of the workload policies, Configuration changes , impacts incase of failure, actinionables for the activity are done and finals checklists are prepared. 4 eye principle is also followed at every step.
+	
+
+100+ DR Drill are supported in the last year. This year also we have started with the same.
+
+30
+	
+
+Fallback Drills
+	
+
+Ongoing
+	
+
+NA
+	
+
+Handling the actionables for FB DRILLS for several applications is a daily activity for the team. Detailed Analysis of the workload policies, Configuration changes , impacts incase of failure, actinionables for the activity are done and finals checklists are prepared. 4 eye principle is also followed at every step.
+	
+
+20+ DR Drill are supported in the last year. This year also we have started with the same.
+
+31
+	
+
+Server Monitoring and Health Check
+	
+
+Completed
+	
+
+NA
+	
+
+Several health check and Monitoring jobs are implemented in i-Automation to monitor the health of its servers.Appdynamics
+	
+
+Done
